@@ -29,30 +29,6 @@ Config::Config(std::string name) {
 	}
 }
 
-Config::~Config() {
-	// TODO Auto-generated destructor stub
-}
-
-Config::Config(Config &&other) {
-	// TODO Auto-generated constructor stub
-
-}
-
-Config::Config(const Config &other) {
-	// TODO Auto-generated constructor stub
-
-}
-
-Config& Config::operator=(const Config &other) {
-	// TODO Auto-generated method stub
-
-}
-
-Config& Config::operator=(Config &&other) {
-	// TODO Auto-generated method stub
-
-}
-
 void Config::generateConfig(std::ifstream &inputFile){
 
 	std::string line;
