@@ -16,8 +16,6 @@
 MyFactory::MyFactory(std::unordered_map<std::string, std::string> &pconfig) {
 
 
-	this->_prset = nullptr;
-	this->_pstmt = nullptr;
 	this->_schema = pconfig["schema"];
 	this->_user = pconfig["user"];
 	this->_password = pconfig["password"];

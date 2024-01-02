@@ -12,9 +12,8 @@
 
 class Agent {
 public:
-	Agent();
 	Agent(unsigned int, std::string, std::string, unsigned long);
-	virtual ~Agent();
+
 
 	std::string getIpAddress() const;
 	std::string getUUID() const;

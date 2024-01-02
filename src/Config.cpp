@@ -48,6 +48,6 @@ void Config::generateConfig(std::ifstream &inputFile){
 	}
 }
 
-const std::unordered_map<std::string, std::string> Config::getConfigMap(){
+std::unordered_map<std::string, std::string>& Config::getConfigMap(){
 	return this->configMap;
 }

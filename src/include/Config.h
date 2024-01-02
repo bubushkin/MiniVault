@@ -19,18 +19,16 @@
 class Config {
 public:
 	Config(std::string);
-	virtual ~Config();
+
 	Config(Config &&other);
 	Config(const Config &other);
 	Config& operator=(const Config &other);
 	Config& operator=(Config &&other);
-	const std::unordered_map<std::string, std::string> getConfigMap();
-
-
+	std::unordered_map<std::string, std::string>& getConfigMap();
 
 private:
 	std::string filepath;
-	std::unordered_map<std::string, std::string> configMap;
+	std::unordered_map<std::string, std::string> configMap; // @suppress("Invalid template argument")
 
 	void generateConfig(std::ifstream &);
 };

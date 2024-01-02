@@ -14,6 +14,7 @@
 #include <cppconn/resultset.h>
 #include <cppconn/statement.h>
 #include <cppconn/prepared_statement.h>
+#include <unordered_map>
 
 #include <vector>
 #include "Agent.h"
@@ -36,8 +37,6 @@ private:
 
     sql::mysql::MySQL_Driver *_pdriver;
     sql::Connection *_pconn;
-    sql::PreparedStatement *_pstmt;
-    sql::ResultSet *_prset;
 
 };
 

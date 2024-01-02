@@ -20,15 +20,15 @@ std::string Agent::getIpAddress() const{
 
 }
 std::string Agent::getUUID() const {
-	this->_uuid;
+	return this->_uuid;
 
 }
 unsigned long Agent::getLastContact() const {
-	this->_last_contact;
+	return this->_last_contact;
 }
 
 unsigned int Agent::getId() const {
-	this->_id;
+	return this->_id;
 }
 
 

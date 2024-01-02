@@ -1,6 +1,7 @@
 #include <iostream>
 #include <unistd.h>
 #include "include/Config.h"
+#include "include/MyFactory.h"
 
 
 #define USAGE() \
@@ -18,6 +19,7 @@ int main(int argc, char **argv) {
 	}
 
 	Config *pconfig = nullptr;
+	MyFactory *pdb = nullptr;
 
 	while((c = getopt(argc, argv, "c:")) != -1){
 		switch(c){
@@ -36,6 +38,11 @@ int main(int argc, char **argv) {
 		}
 	}
 
+	pdb = new MyFactory(pconfig->getConfigMap());
+	auto a = pdb->getAgents();
+
+	delete a;
+	delete pdb;
 	delete pconfig;
 	return EXIT_SUCCESS;
 
