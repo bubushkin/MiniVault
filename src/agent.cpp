@@ -5,7 +5,7 @@
  *      Author: iskandar
  */
 
-#include "include/Agent.h"
+#include "include/agent.h"
 
 Agent::Agent(unsigned int id, std::string ip_address, std::string uuid, unsigned long last_contact){
 	this->_id = id;

@@ -5,7 +5,7 @@
  *      Author: iskandar
  */
 
-#include "include/Config.h"
+#include "include/config.h"
 
 Config::Config(std::string name) {
 	// TODO Auto-generated constructor stub

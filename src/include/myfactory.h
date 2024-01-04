@@ -17,17 +17,22 @@
 #include <unordered_map>
 
 #include <vector>
-#include "Agent.h"
+#include "agent.h"
+#include "secret.h"
 
 class MyFactory {
 
 public:
 	MyFactory(std::unordered_map<std::string, std::string> &);
+    ~MyFactory();
 
     const std::string *getHostname();
     const std::string *getSchema();
     Agent *getAgent(std::string *);
     std::vector<Agent*>*  getAgents();
+    void registerAgent(Agent *);
+    void registerSecret(Secret *);
+
 
 private:
     std::string _host;
