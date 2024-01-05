@@ -13,7 +13,9 @@ int main(int argc, char **argv) {
 
 	int c;
 
-	if(argc < 2){
+    std::string err = std::string(__FILE__ + ":" + __FUNCTION__ + ":")
+
+    if(argc < 2){
 		USAGE()
 	}
 

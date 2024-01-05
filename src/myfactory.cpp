@@ -4,15 +4,6 @@
 
 #include "include/myfactory.h"
 
-
-#define SQLEXCEPTION \
-		std::cout << "# ERR: SQLException in " << __FILE__; \
-		std::cout << "(" << __FUNCTION__ << ") on line " << __LINE__ << std::endl; \
-		std::cout << "# ERR: " << ex.what(); \
-		std::cout << " (MySQL error code: " << ex.getErrorCode(); \
-		std::cout << ", SQLState: " << ex.getSQLState() << " )" << std::endl; \
-
-
 MyFactory::MyFactory(std::unordered_map<std::string, std::string> &pconfig) {
 
 

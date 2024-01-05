@@ -6,22 +6,32 @@
 #define MINIVAULT_SECRET_H
 
 #include <string>
+#include <openssl/evp.h>
+#include <openssl/conf.h>
+#include <iostream>
+
+#define PERROR(X) \
+        std::cerr << __FILE__ << ":" << __FUNCTION__ << ":" <<  X  << errno; \
 
 class Secret {
 
 public:
 
-    Secret(std::string cname, std::string raw_secret);
+    Secret(std::string cname, std::string raw_secret, std::string key);
 
     std::string getCname() const;
-    std::string getSecret() const;
+    unsigned char * getSecret() const;
     std::string getRawSecret() const;
-    void generateSecret();
+    void setKey(std::string);
+    void encrypt();
+    std::string decrypt();
 
 private:
     std::string _cname;
-    std::string _secret;
+    unsigned char *_psecret;
+    std::string _key;
     std::string _raw_secret;
+    int _cipher_len = 0;
 
 };
 
